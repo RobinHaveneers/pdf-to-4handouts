@@ -25,14 +25,25 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>1.1.2</string>
+				<string>1.2.1</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Finder</string>
 				</array>
 				<key>AMParameterProperties</key>
 				<dict>
-					<key>fileNames</key>
+					<key>defaultLocation</key>
+					<dict>
+						<key>isPathPopUp</key>
+						<true/>
+						<key>variableUUIDsInMenu</key>
+						<array/>
+					</dict>
+					<key>granularity</key>
+					<dict/>
+					<key>multipleSelection</key>
+					<dict/>
+					<key>promptMessage</key>
 					<dict/>
 				</dict>
 				<key>AMProvides</key>
@@ -45,43 +56,50 @@
 					</array>
 				</dict>
 				<key>ActionBundlePath</key>
-				<string>/System/Library/Automator/Get Specified Finder Items.action</string>
+				<string>/System/Library/Automator/Ask for Finder Items.action</string>
 				<key>ActionName</key>
-				<string>Get Specified Finder Items</string>
+				<string>Ask for Finder Items</string>
 				<key>ActionParameters</key>
 				<dict>
-					<key>fileNames</key>
-					<array>
-						<string>~/Downloads/Economie</string>
-					</array>
+					<key>defaultLocation</key>
+					<string>~/Desktop</string>
+					<key>granularity</key>
+					<integer>1</integer>
+					<key>multipleSelection</key>
+					<false/>
+					<key>promptMessage</key>
+					<string>Choose a Finder Item:</string>
 				</dict>
 				<key>BundleIdentifier</key>
-				<string>com.apple.Automator.SpecifiedFiles</string>
+				<string>com.apple.Automator.AskForFinderItems</string>
 				<key>CFBundleVersion</key>
-				<string>1.1.2</string>
+				<string>1.2.1</string>
 				<key>CanShowSelectedItemsWhenRun</key>
-				<false/>
-				<key>CanShowWhenRun</key>
 				<true/>
+				<key>CanShowWhenRun</key>
+				<false/>
 				<key>Category</key>
 				<array>
 					<string>AMCategoryFilesAndFolders</string>
 				</array>
 				<key>Class Name</key>
-				<string>SpecifiedFilesAction</string>
+				<string>AMAskForFinderItemsAction</string>
 				<key>InputUUID</key>
-				<string>E7175A74-4038-4705-98A2-7819391A3B37</string>
+				<string>EFD668D1-54E7-4251-92F7-60F3F0A0E6D1</string>
 				<key>Keywords</key>
 				<array>
-					<string>File</string>
-					<string>Choose</string>
 					<string>Find</string>
-					<string>Get</string>
+					<string>Item</string>
+					<string>File</string>
+					<string>Folder</string>
+					<string>Ask</string>
+					<string>Choose</string>
+					<string>Prompt</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>66AA0A11-1962-4F7F-B2D2-439BA97EE441</string>
+				<string>8E8556F3-3661-48F6-A214-81544CE970AF</string>
 				<key>UUID</key>
-				<string>D63603F9-8D3C-4C45-9D7D-26725B5B8FB1</string>
+				<string>19C4F19A-564C-4EB6-AAEB-112ADC335E9D</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Finder</string>
@@ -91,9 +109,9 @@
 					<key>0</key>
 					<dict>
 						<key>default value</key>
-						<array/>
+						<false/>
 						<key>name</key>
-						<string>fileNames</string>
+						<string>multipleSelection</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
@@ -101,13 +119,54 @@
 						<key>uuid</key>
 						<string>0</string>
 					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>granularity</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<string>~/Desktop</string>
+						<key>name</key>
+						<string>defaultLocation</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>default value</key>
+						<string>Choose a Finder Item:</string>
+						<key>name</key>
+						<string>promptMessage</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>3</string>
+					</dict>
 				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>514.000000:360.000000</string>
+				<string>514.000000:226.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
+				<string>/System/Library/Automator/Ask for Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -207,7 +266,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>514.000000:606.000000</string>
+				<string>514.000000:472.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -217,10 +276,10 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>57D84B03-E61F-4218-B32A-7A284D3A4607</key>
+		<key>17CDB462-6D8C-4150-8E3F-F9AC6D82C2DA</key>
 		<dict>
 			<key>from</key>
-			<string>D63603F9-8D3C-4C45-9D7D-26725B5B8FB1 - D63603F9-8D3C-4C45-9D7D-26725B5B8FB1</string>
+			<string>19C4F19A-564C-4EB6-AAEB-112ADC335E9D - 19C4F19A-564C-4EB6-AAEB-112ADC335E9D</string>
 			<key>to</key>
 			<string>F857FE8B-50CC-4462-833A-1502B426F710 - F857FE8B-50CC-4462-833A-1502B426F710</string>
 		</dict>
