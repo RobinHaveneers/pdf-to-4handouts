@@ -52,9 +52,7 @@
 				<dict>
 					<key>fileNames</key>
 					<array>
-						<string>~/Downloads/Economie/2013_h08_de_markt_van_volmaakte_mededinging.pdf</string>
-						<string>~/Downloads/Economie/2013_h09_monopolie.pdf</string>
-						<string>~/Downloads/Economie/2013_h10_onvolmaakte_mededinging_en_productdifferentiatie.pdf</string>
+						<string>~/Downloads/Economie</string>
 					</array>
 				</dict>
 				<key>BundleIdentifier</key>
@@ -104,12 +102,10 @@
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>514.000000:308.000000</string>
+				<string>514.000000:360.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -157,7 +153,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}	tell application "Finder"		--set fl to files of folder POSIX file input as alias list		set fl to files of folder input as alias list	end tell	repeat with f in fl		tell application "Preview"			open f			repeat until application "Preview" exists			end repeat			activate			repeat until window 1 exists			end repeat		end tell		tell application "System Events"			tell process "Preview"				set frontmost to true				keystroke "p" using command down				repeat until window 1 exists				end repeat			end tell			tell application process "Preview"				tell window 1					tell sheet 1												tell radio group 3							tell radio button 2								click							end tell						end tell												tell pop up button 5							click							tell menu 1								tell menu item 3									click								end tell							end tell						end tell												tell pop up button 1							click							tell menu 1								tell menu item "4"									click								end tell							end tell						end tell												tell menu button "PDF"							click							tell menu 1								tell menu item 2									click								end tell							end tell						end tell												tell sheet 1							tell button 1								click							end tell						end tell												tell sheet 1							tell sheet 1								tell button "Replace"									click								end tell							end tell						end tell											end tell				end tell			end tell			delay 2			keystroke "w" using command down		end tell	end repeat		return inputend run</string>
+					<string>on run {input, parameters}	tell application "Finder"		set fl to files of folder input as alias list	end tell	repeat with f in fl		tell application "Preview"			open f			repeat until application "Preview" exists			end repeat			activate			repeat until window 1 exists			end repeat		end tell		tell application "System Events"			tell process "Preview"				set frontmost to true				keystroke "p" using command down				repeat until window 1 exists				end repeat			end tell			tell application process "Preview"				tell window 1					tell sheet 1												tell radio group 3							tell radio button 2								click							end tell						end tell												tell pop up button 5							click							tell menu 1								tell menu item 3									click								end tell							end tell						end tell												tell pop up button 1							click							tell menu 1								tell menu item "4"									click								end tell							end tell						end tell												tell menu button "PDF"							click							tell menu 1								tell menu item 2									click								end tell							end tell						end tell												tell sheet 1							tell button 1								click							end tell						end tell												tell sheet 1							tell sheet 1								if exists then									tell button "Replace"										click									end tell								end if							end tell						end tell											end tell				end tell			end tell			delay 3			keystroke "w" using command down		end tell	end repeatend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -221,7 +217,7 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>489AB927-1AD8-4121-BFEA-D1B97C4830F0</key>
+		<key>57D84B03-E61F-4218-B32A-7A284D3A4607</key>
 		<dict>
 			<key>from</key>
 			<string>D63603F9-8D3C-4C45-9D7D-26725B5B8FB1 - D63603F9-8D3C-4C45-9D7D-26725B5B8FB1</string>
